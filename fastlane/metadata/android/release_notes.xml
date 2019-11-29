@@ -1,127 +1,117 @@
 <ar>
-13.4:
-* تمت إضافة دعم المعاينة عن بُعد للمقالات والصفحات.
-* تظل المقالات الموضوعة في سلة المهملات في سلة المهملات. لا بد من استعادتها قبل التحرير أو المعاينة.
-* تم إصلاح ما يلي: يؤدي النقر على "نشر" حول مقالة خاصة إلى نشر مقالتك بشكل موثوق الآن على أنها خاصة، وتم حل بعض مشكلات تحرير الرابط.
-* تُنسخ التغييرات غير المحفوظة على المقالات والصفحات نسخًا احتياطيًا تلقائيًا.
+13.6:
+- قمنا بتحديث لون شريط التنقل إلى اللون الأبيض على نظام التشغيل Android 8.1 والإصدارات الأحدث منه.
+- تم إصلاح الأخطاء الواردة في ترتيب قائمة الصفحات، لذا ستظهر الصفحات دائمًا بترتيب أبجدي.
+- تحديثات محرِّر المكوّنات: تمت إضافة دعم للصور وخيارات محاذاة الصورة في Pexels.
+
 </ar>
 <de-DE>
-13.4:
-* Die externe Vorschau wird nun für Beiträge und Seiten unterstützt.
-* In den Papierkorb verschobene Beiträge bleiben dort. Zur Bearbeitung oder Ansicht einer Vorschau müssen sie zuerst wiederhergestellt werden.
-* Behoben: Durch Klicken auf „Veröffentlichen“ bei einem privaten Beitrag wird der Beitrag nun zuverlässig privat veröffentlicht. Dabei wurden Probleme bei der Linkbearbeitung gelöst.
-* Nicht gespeicherte Änderungen an Beiträgen und Seiten werden automatisch gesichert.
+13.6:
+- Wir haben die Farbe der Navigationsleiste in Android 8.1 oder höher auf Weiß aktualisiert.
+- Ein Fehler beim Sortieren von Seiten wurden behoben, sodass Seiten stets in alphabetischer Reihenfolge angezeigt werden.
+- Updates im Block-Editor: Support für Pexels-Bilder und Optionen zum Ausrichten von Bildern hinzugefügt.
+
 </de-DE>
 <en-US>
-13.4:
-* Added Remote Preview support for posts and pages.
-* Trashed posts stay trashed. They must be restored before editing or previewing.
-* Fixed: Clicking on “Publish” on a private post now reliably publishes the post as private, some link editing issues resolved.
-* Unsaved changes to posts and pages are automatically backed up.
+13.6:
+- We updated the navigation bar color to white on Android 8.1 and higher.
+- Bugs in page list ordering are fixed, so pages always appear in alphabetical order.
+- Block editor updates: Added support for Pexels images and image alignment options.
+
 </en-US>
 <es-ES>
-13.4:
-* Añadida compatibilidad de vista previa remota para entradas y páginas.
-* Las entradas de la papelera se quedan en la papelera. Deben ser restauradas antes de editar o previsualizar.
-* Corregido: Ahora, al hacer clic en «Publicar» en una entrada privada, la entrada se publica con seguridad como privada; resueltos algunos problemas de edición de enlaces.
-* Los cambios no guardados en entradas y páginas se guardan automáticamente en una copia de seguridad.
+13.6:
+- Hemos actualizado el color de la barra de navegación a blanco en Android 8.1 y superior.
+- Los fallos en el orden de la lista de páginas han sido corregidos, por lo que las páginas siempre aparecen en orden alfabético.
+- Actualizaciones del editor de bloques: Añadida compatibilidad para imágenes de Pexels y opciones de alineación de imágenes.
 </es-ES>
 <fr-CA>
-13.4 :
-* Ajout de la prévisualisation à distance pour les publications et les pages.
-*Les publications mises à la poubelle restent à la poubelle. Elles doivent être restaurées avant de les modifier ou de les prévisualiser.
-* Corrigé : Le fait de cliquer "Publier" sur une publication privée la publier effectivement de manière privée, et certains problèmes de modification de liens ont été résolus.
-* Les modifications non sauvegardées des publications et des pages sont automatiquement sauvegardées.
+13.6:
+- We updated the navigation bar color to white on Android 8.1 and higher.
+- Bugs in page list ordering are fixed, so pages always appear in alphabetical order.
+- Block editor updates: Added support for Pexels images and image alignment options.
+
 </fr-CA>
 <fr-FR>
-13.4 :
-* Ajout de la prévisualisation à distance pour les publications et les pages.
-*Les publications mises à la poubelle restent à la poubelle. Elles doivent être restaurées avant de les modifier ou de les prévisualiser.
-* Corrigé : Le fait de cliquer "Publier" sur une publication privée la publier effectivement de manière privée, et certains problèmes de modification de liens ont été résolus.
-* Les modifications non sauvegardées des publications et des pages sont automatiquement sauvegardées.
+13.6:
+- We updated the navigation bar color to white on Android 8.1 and higher.
+- Bugs in page list ordering are fixed, so pages always appear in alphabetical order.
+- Block editor updates: Added support for Pexels images and image alignment options.
+
 </fr-FR>
 <iw-IL>
-13.4:
-- הוספנו תמיכה בתצוגה מקדימה בעמדות עבודה מרוחקות לפוסטים ולעמודים.
-* פוסטים שהועברו לפח נשארים בפח. עליך לשחזר את הפריטים לפני עריכה או יצירה של תצוגה מקדימה.
-* בעיות שתוקנו: לחיצה על "פרסום" בפוסט פרטי כעת מפרסמת באופן מהימן את הפוסט כפרטי. בנוסף, תיקנו כמה מהבעיות בעריכת הקישורים.
-* שינויים שלא נשמרו לפוסטים ולעמודים מגובים באופן אוטומטי.
+13.6:
+- שינינו את הצבע של סרגל הניווט ללבן ב-Android 8.1 ומעלה.
+- תוקנו הבאגים בסידור רשימת העמודים כך שהעמודים תמיד יופיעו בסדר אלפביתי.
+- עדכונים בעורך הבלוקים: הוספנו תמיכה בתמונות Pexels ובאפשרויות יישור תמונה.
+
 </iw-IL>
 <id>
-13.4:
-* Menambahkan dukungan Pratinjau Jarak Jauh untuk pos dan halaman.
-* Pos yang dibuang tetap ada di sampah. Pos tersebut harus dipulihkan untuk dapat disunting atau dipratinjau.
-* Perbaikan: Mengklik “Publikasikan” pada pos pribadi kini secara akurat memublikasikan pos sebagai pribadi, beberapa masalah penyuntingan tautan telah diperbaiki.
-* Perubahan yang tidak tersimpan pada pos dan halaman akan otomatis dicadangkan.
+13.6:
+- Kami memperbarui warna bilah navigasi menjadi putih di Android 8.1 dan yang lebih tinggi.
+- Bug di pengurutan daftar halaman telah diperbaiki, sehingga halaman selalu ditampilkan dalam urutan alfabet.
+* Pembaruan penyunting blok: Dukungan yang ditambahkan untuk gambar Pexels dan pilihan penyelarasan gambar.
+
 </id>
 <it-IT>
-13.4:
-* Aggiunto supporto per l'anteprima da remoto per articoli e pagine.
-* Gli articoli nel cestino restano nel cestino. Devono essere ripristinati prima della modifica o dell'anteprima.
-* Correzione: facendo clic su "Pubblica" su un articolo privato, ora l'articolo viene correttamente pubblicato come privato; risolti alcuni problemi di modifica dei link.
-* Backup automatico delle modifiche non salvate ad articoli e pagine.
+13.6:
+- Abbiamo aggiornato il colore della barra di navigazione al bianco su Android 8.1 e versioni successione.
+- I bug nell'ordinamento dell'elenco di pagine sono stati risolti, quindi le pagine saranno sempre visualizzate in ordine alfabetico.
+* Aggiornamenti all'editor dei blocchi: aggiunto supporto per immagini Pexels e opzioni per l'allineamento delle immagini.
+
 </it-IT>
 <ja-JP>
-13.4:
-* 投稿とページの「リモートプレビュー」サポートを追加しました。
-* ゴミ箱に移動済みの投稿は、そのままゴミ箱に残ります。編集したり、プレビューするには、元に戻す必要があります。
-* 修正済み事項として、非公開の投稿の「公開」をクリックすることによって、投稿を確実に非公開で公開できるようになりました。リンク編集に関するいくつかの問題を解消しました。
-* 投稿とページの保存されていない変更を自動的にバックアップします。
+13.6:
+- Android 8.1以降で、ナビゲーションバーの色が白に変更されました。
+- ページリストの順序についてのバグが修正され、ページが常にアルファベット順に表示されるようになりました。
+- ブロックエディターの更新 :Pexels 画像対応となり、画像の配置オプションが追加されました。
+
 </ja-JP>
 <ko-KR>
-13.4:
-* 글 및 페이지에 대한 원격 미리보기 지원이 추가되었습니다.
-* 휴지통으로 이동한 글은 계속 휴지통에 있습니다. 편집 또는 미리보기 전에 복원해야 합니다.
-* 수정 사항: 이제 비공개 글에서 “발행”을 클릭하면 글이 안정적으로 비공개로 발행되고, 일부 링크 편집 문제가 해결되었습니다.
-* 글 및 페이지에 저장되지 않은 변경 사항은 자동으로 백업됩니다.
+13.6:
+- Android 8.1 이상에서 탐색 표시줄 색을 흰색으로 업데이트했습니다.
+- 페이지 목록 순서의 버그가 수정되어 페이지가 항상 알파벳순으로 표시됩니다.
+- 블록 편집기 업데이트: Pexels 이미지 및 이미지 정렬 옵션에 대한 지원이 추가되었습니다.
+
 </ko-KR>
 <nl-NL>
-13.4:
-* Voorbeeldweergave op afstand toegevoegd voor berichten en pagina's.
-* Verwijderde berichten blijven in de prullenbak. Ze moeten voor de voorbeeldweergave of het bewerken worden hersteld.
-* Opgelost: Klikken op Publiceren bij een privébericht zorgt er nu voor dat het bericht daadwerkelijk privé is, en enkele problemen met linkbewerking zijn opgelost.
-* Er worden automatisch back-ups gemaakt van niet-opgeslagen wijzigingen in berichten en pagina's.
+13.6:
+- We hebben de kleur van de navigatiebalk op Android 8.1 en hoger bijgewerkt naar wit.
+- Bugs die voor problemen zorgden met de sortering van de paginalijst zijn verwijderd, zodat pagina's altijd in alfabetische volgorde worden weergegeven.
+* Updates van de blokeditor: Ondersteuning voor Pexels-afbeeldingen en opties voor uitlijning van afbeeldingen toegevoegd.
+
 </nl-NL>
-<pt-BR>
-13.4:
-* Adicionamos visualização remota a posts e páginas
-* Posts enviados para a lixeira continuarão nela. É necessário restaurá-los antes de editar ou visualizar.
-* Correções: ao clicar em "Publicar" em um post privado, agora ele é publicado como privado. Também corrigimos alguns problemas com links de edição.
-* Agora criamos um backup das alterações não salvas em posts e páginas.
-</pt-BR>
 <ru-RU>
-13.4:
-* Поддержка удаленного просмотра для страниц и записей.
-* Записи удаленные в корзину должны быть восстановлены из неё перед просмотром или редактированием.
-* Исправлена - публикация личной записи будет публиковать запись как личную, также исправлены некоторые проблемы с редактированием ссылок.
-* Автоматическое резервное копирование несохраненных изменений в записях и на страницах.
+13.6:
+- Цвет панели навигации изменен на белый для Android 8.1 и выше
+- Исправлена ошибка отображения списка страниц, теперь они всегда будут упорядочены по алфавиту.
+- Обновление редактора блоков: Поддержка изображений с Pexels и возможности выравнивания изображений.
 
 </ru-RU>
 <sv-SE>
-13.4:
-* Lagt till stöd för fjärrförhandsvisning av inlägg och sidor.
-* Kastade inlägg stannar kvar i papperskorgen. Man måste återställa dem innan man kan redigera eller förhandsvisa dem.
-* Rättat: När man klickar på ”Publicera” för ett privat inlägg kommer det verkligen att publiceras privat. Dessutom har några problem med redigering av länkar rättats.
-* Osparade ändringar i inlägg och sidor sparas automatiskt i en reservkopia.
+13.6:
+- Vi har uppdaterat navigationslisten färg till vitt i Android 8.1 och senare.
+- Fel i sorteringen av listan med sidor har rättats så att sidorna alltid ska visas i bokstavsordning.
+- Uppdateringar av blockredigeraren: Stöd för Pexels-bilder och justering av bilder i sidled.
+
 </sv-SE>
 <tr-TR>
-13.4:
-* İletiler ve sayfalar için Uzaktan Önizleme desteği eklendi.
-* Çöpe atılan iletiler çöpte kalır. Düzenleme veya önizlemeden önce geri getirilmeleri gerekir.
-* Düzeltildi: Özel bir iletide “Yayınla” öğesine tıklamak artık iletiyi güvenilir bir biçimde özel olarak yayınlar, bazı bağlantı düzenleme sorunları düzeltildi.
-* İleti ve sayfalardaki kaydedilmeyen değişiklikler otomatik olarak yedeklenir.
+13.6:
+- Gezinti çubuğunun rengini Android 8.1 ve üzeri sürümlerde beyaza dönüştürdük.
+- Sayfa listesindeki hatalar düzeltildi, bu yüzden sayfalar her zaman alfabetik sırada görünüyor.
+- Block düzenleyici güncellemeleri: Pexels görselleri ve görüntü hizalama seçenekleri için destek eklendi.
 </tr-TR>
 <zh-CN>
-13.4：
-* 新增了对文章和页面的远程预览支持。
-* 已放入回收站的文章依旧在回收站中。这些文章必须先进行还原，才能进行编辑或预览。
-* 已修复：现在，在私密文章中点击“发布”按钮，即可放心地将文章发布为私密文章，某些链接编辑问题也得到了解决。
-* 系统会自动备份文章和页面中未保存的更改。
+13.6：
+- 在 Android 8.1 及更高版本中，我们已将导航栏颜色更新为白色。
+- 修复了页面列表排序中的错误，因此页面始终按字母顺序显示。
+- 更新了区块编辑器：增加了对 Pexels 图片和图片对齐选项的支持。
+
 </zh-CN>
 <zh-TW>
-13.4：
-* 為文章和頁面新增「遠端預覽」支援。
-* 移至垃圾桶的文章會一直留在垃圾桶。若要編輯或預覽，必須先還原這些文章。
-* 修正內容：現在按一下私密文章上的「發表」，將能確實以私密狀態發表文章，部分連結編輯問題也已獲得解決。
-* 文章和頁面未儲存的變更都會自動備份。
+13.6：
+- 我們已將 Android 8.1 與更新版本的導覽列顏色改成白色。
+- 頁面清單排序的錯誤已經修正，現在頁面將一律依字母順序顯示。
+* 區塊編輯器更新：新增對 Pexels 圖片和圖片對齊選項的支援。
+
 </zh-TW>

@@ -619,7 +619,12 @@ public class MySiteFragment extends Fragment implements
 
     private void viewPages() {
         requestNextStepOfActiveQuickStartTask();
-        ActivityLauncher.viewCurrentBlogPages(requireActivity(), getSelectedSite());
+        SiteModel selectedSite = getSelectedSite();
+        if (selectedSite != null) {
+            ActivityLauncher.viewCurrentBlogPages(requireActivity(), selectedSite);
+        } else {
+            ToastUtils.showToast(getActivity(), R.string.site_cannot_be_loaded);
+        }
     }
 
     private void viewStats() {
@@ -653,6 +658,9 @@ public class MySiteFragment extends Fragment implements
     }
 
     private void updateQuickStartContainer() {
+        if (!isAdded()) {
+            return;
+        }
         if (QuickStartUtils.isQuickStartInProgress(mQuickStartStore)) {
             int site = AppPrefs.getSelectedSite();
 
@@ -974,7 +982,7 @@ public class MySiteFragment extends Fragment implements
     }
 
     private void refreshSelectedSiteDetails(SiteModel site) {
-        if (!isAdded()) {
+        if (!isAdded() || getView() == null) {
             return;
         }
 

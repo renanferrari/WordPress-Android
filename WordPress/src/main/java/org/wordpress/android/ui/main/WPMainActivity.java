@@ -57,9 +57,11 @@ import org.wordpress.android.fluxc.store.SiteStore.OnSiteEditorsChanged;
 import org.wordpress.android.fluxc.store.SiteStore.OnSiteRemoved;
 import org.wordpress.android.login.LoginAnalyticsListener;
 import org.wordpress.android.networking.ConnectionChangeReceiver;
+import org.wordpress.android.push.GCMMessageHandler;
 import org.wordpress.android.push.GCMMessageService;
 import org.wordpress.android.push.GCMRegistrationIntentService;
 import org.wordpress.android.push.NativeNotificationsUtils;
+import org.wordpress.android.push.NotificationType;
 import org.wordpress.android.push.NotificationsProcessingService;
 import org.wordpress.android.ui.ActivityId;
 import org.wordpress.android.ui.ActivityLauncher;
@@ -74,6 +76,7 @@ import org.wordpress.android.ui.main.WPMainNavigationView.PageType;
 import org.wordpress.android.ui.news.NewsManager;
 import org.wordpress.android.ui.notifications.NotificationEvents;
 import org.wordpress.android.ui.notifications.NotificationsListFragment;
+import org.wordpress.android.ui.notifications.SystemNotificationsTracker;
 import org.wordpress.android.ui.notifications.adapters.NotesAdapter;
 import org.wordpress.android.ui.notifications.receivers.NotificationsPendingDraftsReceiver;
 import org.wordpress.android.ui.notifications.utils.NotificationsActions;
@@ -118,6 +121,7 @@ import javax.inject.Inject;
 import static androidx.lifecycle.Lifecycle.State.STARTED;
 import static org.wordpress.android.WordPress.SITE;
 import static org.wordpress.android.fluxc.store.SiteStore.CompleteQuickStartVariant.NEXT_STEPS;
+import static org.wordpress.android.push.NotificationsProcessingService.ARG_NOTIFICATION_TYPE;
 import static org.wordpress.android.ui.JetpackConnectionSource.NOTIFICATIONS;
 
 /**
@@ -170,6 +174,8 @@ public class WPMainActivity extends AppCompatActivity implements
     @Inject NewsManager mNewsManager;
     @Inject QuickStartStore mQuickStartStore;
     @Inject UploadActionUseCase mUploadActionUseCase;
+    @Inject SystemNotificationsTracker mSystemNotificationsTracker;
+    @Inject GCMMessageHandler mGCMMessageHandler;
 
     /*
      * fragments implement this if their contents can be scrolled, called when user
@@ -237,6 +243,11 @@ public class WPMainActivity extends AppCompatActivity implements
             }
 
             if (FluxCUtils.isSignedInWPComOrHasWPOrgSite(mAccountStore, mSiteStore)) {
+                NotificationType notificationType =
+                        (NotificationType) getIntent().getSerializableExtra(ARG_NOTIFICATION_TYPE);
+                if (notificationType != null) {
+                    mSystemNotificationsTracker.trackTappedNotification(notificationType);
+                }
                 // open note detail if activity called from a push
                 boolean openedFromPush = (getIntent() != null && getIntent().getBooleanExtra(ARG_OPENED_FROM_PUSH,
                         false));
@@ -436,7 +447,7 @@ public class WPMainActivity extends AppCompatActivity implements
         }
 
         if (getIntent().hasExtra(NotificationsUtils.ARG_PUSH_AUTH_TOKEN)) {
-            GCMMessageService.remove2FANotification(this);
+            mGCMMessageHandler.remove2FANotification(this);
 
             NotificationsUtils.validate2FAuthorizationTokenFromIntentExtras(
                     getIntent(),
@@ -473,10 +484,10 @@ public class WPMainActivity extends AppCompatActivity implements
 
         // it could be that a notification has been tapped but has been removed by the time we reach
         // here. It's ok to compare to <=1 as it could be zero then.
-        if (GCMMessageService.getNotificationsCount() <= 1) {
+        if (mGCMMessageHandler.getNotificationsCount() <= 1) {
             String noteId = getIntent().getStringExtra(NotificationsListFragment.NOTE_ID_EXTRA);
             if (!TextUtils.isEmpty(noteId)) {
-                GCMMessageService.bumpPushNotificationsTappedAnalytics(noteId);
+                mGCMMessageHandler.bumpPushNotificationsTappedAnalytics(noteId);
                 // if voice reply is enabled in a wearable, it will come through the remoteInput
                 // extra EXTRA_VOICE_OR_INLINE_REPLY
                 String voiceReply = null;
@@ -507,10 +518,10 @@ public class WPMainActivity extends AppCompatActivity implements
             }
         } else {
             // mark all tapped here
-            GCMMessageService.bumpPushNotificationsTappedAllAnalytics();
+            mGCMMessageHandler.bumpPushNotificationsTappedAllAnalytics();
         }
 
-        GCMMessageService.removeAllNotifications(this);
+        mGCMMessageHandler.removeAllNotifications(this);
     }
 
     /**
@@ -527,16 +538,21 @@ public class WPMainActivity extends AppCompatActivity implements
                 .dismissNotification(PendingDraftsNotificationsUtils.makePendingDraftNotificationId(postId), this);
 
         // if no specific post id passed, show the list
+        SiteModel selectedSite = getSelectedSite();
+        if (selectedSite == null) {
+            ToastUtils.showToast(this, R.string.site_cannot_be_loaded);
+            return;
+        }
         if (postId == 0) {
             // show list
             if (isPage) {
-                ActivityLauncher.viewCurrentBlogPages(this, getSelectedSite());
+                ActivityLauncher.viewCurrentBlogPages(this, selectedSite);
             } else {
-                ActivityLauncher.viewCurrentBlogPosts(this, getSelectedSite());
+                ActivityLauncher.viewCurrentBlogPosts(this, selectedSite);
             }
         } else {
             PostModel post = mPostStore.getPostByLocalPostId(postId);
-            ActivityLauncher.editPostOrPageForResult(this, getSelectedSite(), post);
+            ActivityLauncher.editPostOrPageForResult(this, selectedSite, post);
         }
     }
 
@@ -566,7 +582,7 @@ public class WPMainActivity extends AppCompatActivity implements
         if (currentPageType == PageType.NOTIFS) {
             // if we are presenting the notifications list, it's safe to clear any outstanding
             // notifications
-            GCMMessageService.removeAllNotifications(this);
+            mGCMMessageHandler.removeAllNotifications(this);
         }
 
         announceTitleForAccessibility(currentPageType);
